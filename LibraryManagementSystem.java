@@ -12,6 +12,11 @@ public class LibraryManagementSystem {
         Scanner input = new Scanner(System.in);
         int choice;
 
+        // test cases 
+        library.addBook(new Book(111,"Volcano City",1955,"Big Boy", "Sci-fi",false));
+        library.addBook(new Book(222,"Rain Village",2000,"Charles Charleson", "Horror",false));
+
+
         do {
             System.out.println("\nLibrary Management System");
             System.out.println("1. Add a Book");
