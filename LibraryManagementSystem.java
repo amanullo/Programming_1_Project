@@ -1,4 +1,4 @@
-package LMS;
+
 
 import java.util.Scanner;
 
@@ -27,17 +27,17 @@ public class LibraryManagementSystem {
                 case 1:
                     System.out.print("Enter book ID: ");
                     int id = input.nextInt();
-                    input.nextLine(); // Consume newline
-                    System.out.print("Enter Title: ");
-                    String title = input.nextLine();
-                    System.out.print("Year of release: ");
+                    input.nextLine();
+                    System.out.print("Enter name: ");
+                    String name = input.nextLine();
+                    System.out.print("Enter year of release: ");
                     int year = input.nextInt();
                     input.nextLine(); // Consume newline
                     System.out.print("Enter Author: ");
                     String author = input.nextLine();
                     System.out.print("Enter genre: ");
                     String genre = input.nextLine();
-                    library.addBook(new Book(id, title, year, author, genre, false));
+                    library.addBook(new Book(id, name, year, author, genre));
                     break;
                 case 2:
                     library.displayBooks();

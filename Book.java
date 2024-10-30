@@ -1,5 +1,3 @@
-package LMS;
-
 public class Book {
     private String name;
     private int year;
@@ -9,25 +7,25 @@ public class Book {
     private boolean boolBorrowed;
 
      //constructor
-     public Book(int bookId, String name, int year, String author, String genre, boolean boolBorrowed) {
+     public Book(int bookId, String name, int year, String author, String genre) {
         this.bookId = bookId;
         this.name = name;
         this.year = year;
         this.author = author;
         this.genre = genre;
-        this.boolBorrowed = boolBorrowed;
+        this.boolBorrowed = boolBorrowed;           // don't think it's needed. I add a list of borrowed book
     }
 
     // getters and setters for each variable
-    public int getBookId() {
+    public int getBookId() {                    
         return this.bookId;
     }
 
-    public String getName() {
+    public String getName() {       
         return this.name;
     }
 
-    public void setBookId(int bookId) {
+    public void setBookId(int bookId) {                 // setter method won't be used
         this.bookId = bookId;
     }
 
@@ -58,22 +56,9 @@ public class Book {
     public void setGenre(String genre) {
         this.genre = genre;
     }
-
-    public void setBorrowed(boolean boolBorrowed) {
-        this.boolBorrowed = boolBorrowed;
-    }
     
     @Override
     public String toString() {
-        return Book("id=" + bookId + ", name='" + name + "', year=" + year + ", author='" + author + "', genre='" + genre + "', Borrowed: " + (boolBorrowed ? "Yes" : "No"));
+        return ("id=" + bookId + ", name=" + name + ", year=" + year + ", author=" + author + ", genre=" + genre); 
     }
-    public static void main(String[] args) {
-        Book book = new Book("1984", 1949, "George Orwell", "Dystopian", false);
-        System.out.println(book);
-
-        Book book2 = new Book("Dune", 1965, "Frank Herbert", "Science Fiction", true);
-        System.out.println(book2);
-    }
-   
-
 }
