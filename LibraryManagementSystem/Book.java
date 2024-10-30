@@ -1,4 +1,4 @@
-package LMS;
+
 
 public class Book {
     private String name;
@@ -66,8 +66,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return Book("id=" + bookId + ", name='" + name + "', year=" + year + ", author='" + author + "', genre='"
-                + genre + "', Borrowed: " + (boolBorrowed ? "Yes" : "No"));
+        return "Book{id=" + bookId + ", name='" + name + "', year=" + year + ", author='" + author + "', genre='" + genre + "', Borrowed: " + (boolBorrowed ? "Yes" : "No") + "}";
     }
 
     public static void main(String[] args) {
